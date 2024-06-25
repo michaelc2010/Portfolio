@@ -9,14 +9,13 @@ const About = () => {
     <>
       <div className='AboutPage'>
         <div className='AboutText'>
-          <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
-          <p>
-            Hi, my name is <b>Devansh Sahni</b> and I am from New Delhi, India.
-            I'm a <b>MERN stack web developer</b> and a final year college student pursuing <b>BTech in CSE</b>. <br/><br/>
-            I have done an internship as a <b>software developer</b> at GoalFi which is a fintech startup.
-            I love to create original projects with beautiful designs, you can check out some of my work in the projects section.<br/><br/>
-            I am <b>open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are in the footer.<br/>
-            Apart from coding I love to do photography, you can check out some of my shots here <a href="https://www.instagram.com/devansh_sahni_/?hl=en" target='_blank'>Instagram.</a>
+          <h1 className='AboutTextHeading' >Get to <b>know</b> us!</h1>
+          <p>                      
+              Founded in <b>1995</b>, the Raleigh Academy of Chinese Language (RACL) is a nonprofit, non-political, 501(c)(3) educational institution. 
+              Its objectives include promoting Chinese language, teaching Chinese and Oriental history and culture, 
+              and enhancing the understanding and friendship among various background people in our community in the Triangle 
+              area of North Carolina. RACL strives to reach its goal by conducting school year-long Saturday classes, 
+              sponsoring Chinese culture oriented activities, and playing an active and contributing role in our community.           
           </p>
         </div>
 
@@ -32,7 +31,7 @@ const About = () => {
 
       </div>
       
-      <h1 className='SkillsHeading'>Professional Skillset</h1>
+      {/* <h1 className='SkillsHeading'>Professional Skillset</h1>
       <div className='skills'>
         
         <Skills skill='React' />
@@ -49,7 +48,7 @@ const About = () => {
         <Skills skill='Npm' />
         <Skills skill='Bootstrap'/>
         
-      </div>
+      </div> */}
     </>
   )
 }

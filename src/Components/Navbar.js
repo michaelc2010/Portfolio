@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 import {AiOutlineHome} from "react-icons/ai";
 import {BsPerson, BsCodeSlash} from "react-icons/bs";
 import {CgFileDocument} from "react-icons/cg";
+import logo from '../images/tcls_logo1.png';
 
+import './Navbar.css';
+import Dropdown from './Dropdown';
+
+// import { Dropdown, DropdownItem } from "flowbite-react";
 
 const Nav = () => {
     const [navbarblur, setnavbarblur]=useState(false);
@@ -38,12 +43,32 @@ const Nav = () => {
     }
     
     window.addEventListener("scroll", scrollHandler);
-
+    const [click, setClick] = useState(false);
+    const [dropdown, setDropdown] = useState(false);
+  
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
+  
+    const onMouseEnter = () => {
+      if (window.innerWidth < 960) {
+        setDropdown(false);
+      } else {
+        setDropdown(true);
+      }
+    };
+  
+    const onMouseLeave = () => {
+      if (window.innerWidth < 960) {
+        setDropdown(false);
+      } else {
+        setDropdown(true);
+      }
+    };
   return (
     <nav className={navbarblur? 'Navbar blur':'Navbar'}> 
  
-        <h1 title='Reload' onClick={()=>window.location.reload(true)} className='Logo'>DS</h1>
-
+        {/* <h1 title='Reload' onClick={()=>window.location.reload(true)} className='Logo'>TCLS</h1> */}
+        <img src ={logo} width={200} onClick={()=>window.location.reload(true)} className='Logo'/>
         <div className='Hamburger' onClick={showMenu}>
             <span className='bar'></span>
             <span className='bar'></span>
@@ -51,10 +76,29 @@ const Nav = () => {
         </div>
 
         <ul className='NavbarLinks'>
-            <li onClick={hideMenu}><Link to="/"><AiOutlineHome/> Home</Link></li>
-            <li onClick={hideMenu}><Link to="/About"><BsPerson/> About</Link></li>
-            <li onClick={hideMenu}><Link to="/Project"><BsCodeSlash/> Project</Link></li>
-            <li onClick={hideMenu}><Link to="/Resume"><CgFileDocument/> Resume</Link></li>
+            <li onClick={hideMenu}><Link to="/"> Home </Link></li>
+            <li onClick={hideMenu}><Link to="/About"> Our School </Link></li>
+            <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <Link className='nav-links' onClick={closeMobileMenu}> Language Classes <i className='fas fa-caret-down' /></Link>
+                {dropdown && <Dropdown />}
+            </li>
+            <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <Link className='nav-links' onClick={closeMobileMenu}> Activity Classes <i className='fas fa-caret-down' /></Link>
+                {dropdown && <Dropdown />}
+            </li>
+            <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <Link className='nav-links' onClick={closeMobileMenu}> Registration <i className='fas fa-caret-down' /></Link>
+                {dropdown && <Dropdown />}
+            </li>
+            <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <Link className='nav-links' onClick={closeMobileMenu}> Student <i className='fas fa-caret-down' /></Link>
+                {dropdown && <Dropdown />}
+            </li>
+            <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <Link className='nav-links' onClick={closeMobileMenu}> PTA <i className='fas fa-caret-down' /></Link>
+                {dropdown && <Dropdown />}
+            </li>
+            <li onClick={hideMenu}><Link to="/Registration"> Volunteering & Sponsors </Link></li>
         </ul>
         
     </nav>

@@ -1,18 +1,25 @@
 import React from 'react';
-import {FaGithub, FaLinkedin} from "react-icons/fa";
+import {FaGithub, FaTwitter, FaFacebook} from "react-icons/fa";
 import {GrMail} from "react-icons/gr";
-import {SiLeetcode} from "react-icons/si"
 
 const Footer = () => {
   return (
     <footer>
-      <h4>Developed by Devansh Sahni</h4>
-      <h4>Copyright &copy; 2023 DS</h4>
+      <p>
+      <h2>Visit us </h2>
+      <h3>Triangle Chinese Language School<br></br>400 E Moore St, Apex, NC 27502</h3>
+
+      </p>
+
+      <p>
+      <h2>Contact us </h2>
+      <h3>909-387-2181 (Main office) <br></br>919-626-4410 (Fax) </h3>
+      </p>
+
       <div className='footerLinks'>
-        <a href="https://github.com/DevanshSahni" target='_blank'><FaGithub/></a>
-        <a href="https://www.linkedin.com/in/devansh-sahni/" target='_blank'><FaLinkedin/></a>
-        <a href='mailTo:devanshsahni@gmail.com' target='_blank'><GrMail/></a>
-        <a href="https://leetcode.com/sahni1403/" target="_blank"><SiLeetcode/></a>
+        <a href="https://www.facebook.com/racl1995/" target='_blank'><FaFacebook/></a>
+        <a href="https://x.com/raclsocial?lang=en" target='_blank'><FaTwitter/></a>
+        <a href='mailTo:racl@gmail.com' target='_blank'><GrMail/></a>
       </div>
     </footer>
   )

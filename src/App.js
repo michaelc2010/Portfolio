@@ -6,10 +6,12 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Project from "./Components/Projects";
+import Signin from "./Components/Signin";
 import MoveToTop from "./Components/MoveToTop";
 import Lottie from  "lottie-react";
 import nightsky from "./LottieFiles/night-sky.json";
 import HashLoader from "react-spinners/HashLoader";
+import Registration from "./Components/Registration";
 
 
 function App() {
@@ -38,9 +40,9 @@ function App() {
       ):(
       <div>
       
-      <Lottie className="bg" animationData={nightsky} loop={true} />  
+      {/* <Lottie className="bg" animationData={nightsky} loop={true} />  
       <Lottie className="bgtwo" animationData={nightsky} loop={true} />   
-      <Lottie className="bgtemp" animationData={nightsky} loop={true} /> 
+      <Lottie className="bgtemp" animationData={nightsky} loop={true} />  */}
 
       <Nav/>
       <MoveToTop/>
@@ -50,6 +52,8 @@ function App() {
         <Route path="/About" element={<About/>}/>
         <Route path="/Project" element={<Project/>}/>
         <Route path="/Resume" element={<Resume/>}/>
+        <Route path="/Registration" element={<Registration/>}/>
+        <Route path="/Signin" element={<Signin/>}/>
       </Routes>
       
       <Footer/>

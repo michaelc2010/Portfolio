@@ -20,8 +20,8 @@
 
 body{
   font-family: 'Raleway', sans-serif;
-  background-color: #031926;
-  color: #E7E7E7;
+  background-color: #fefefe;
+  color: #000000;
   min-height: 100vh;
 }
 
@@ -32,15 +32,15 @@ b{
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar-track {
-  background: #274656;
+  background: #E7E7E7;
   border-radius: 100px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #01111a;
+  background: #94a9b6;
   border-radius: 100px;
 }
 
@@ -75,59 +75,62 @@ b{
   width: 100%;
   z-index: 2;
 
-  height: 70px;
+  height: 90px;
   top: 0;
   transition: all 0.7s;
 }
 
 .blur{
-  background-color:#01111a8d;
+  background-color:#fefefe;
   backdrop-filter: blur( 15px );
   -webkit-backdrop-filter: blur( 20px );
 }
 
 .Logo{
-  font-size: 32px;
+  font-size: 42px;
   letter-spacing: 2px;
-  padding-left: 7%;
-  color: #9067C6;
+  padding-left: 5%;
+  padding-top: 3%;
+  color: #c67467;
   display: flex;
   align-items: center;
   text-align: center;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .NavbarLinks{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 7%;
+  padding-right: 8%;
+  padding-top: 3%;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .NavbarLinks li{
-  padding: 2px 20px;
+  color: #c67467;
+  padding: 2px 8px;
   list-style-type: none;
 }
 
 .NavbarLinks a{
-  color: #c2c1c2;
+  color: #000002;
   display:flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   width: 95%;
-  padding: 2px 7px;
+  padding: 2px 12px;
   letter-spacing: 0.5px;
   text-decoration: none;
 }
 
 .NavbarLinks a:hover{
-  color: #ffffff;
+  color: #000002;
 }
 .NavbarLinks a::after{
-  background-color: #ffffff;
+  background-color: #07a424;
   content: "";
   position: absolute;
   height: 3px;
@@ -150,16 +153,16 @@ b{
   }
 
   .NavbarLinks{
-    font-size: 26px;
+    font-size: 22px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     position: fixed;
     inset: 0 0 0 50%;
-    gap: 50px;
-    background-color:#431f47;
+    gap: 12px;
+    background-color:#E7E7E7;
     height: 100vh;
-    padding-top: max(20%,120px);
+    padding-top: max(2%,100px);
     transform: translateX(100%);
     transition: 0.5s;
   }
@@ -178,11 +181,11 @@ b{
 
   .bar{
     display: block;
-    background-color: #E7E7E7;
+    background-color: #e30a0a;
     border-radius: 50px;
-    height: 2.5px;
+    height: 3px;
     width: 30px;
-    margin: 6px;
+    margin: 5px;
     transition: 0.5s;
   }
   .barOne{
@@ -209,7 +212,7 @@ b{
 .HomePage{
   display: flex;
   justify-content: space-evenly;
-  min-height: 80vh;
+  min-height: 75vh;
   margin-top: 100px;
   margin-bottom: -50px;
   align-items: center;
@@ -273,13 +276,13 @@ b{
 }
 
 
-/* ABOUT */
+/* About Us Page */
 
 .AboutPage{
   display: flex;
   justify-content: space-evenly;
-  min-height: 80vh;
-  margin-top: 100px;
+  min-height: 65vh;
+  margin-top: 120px;
   align-items: center;
   padding: 25px;
 }
@@ -287,9 +290,9 @@ b{
 .AboutText{
   width: 50%;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 30px;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.0px;
 }
 .AboutTextHeading{
   font-size: 35px;
@@ -304,6 +307,26 @@ b{
 
 .Avatar{
   width: 280px;
+}
+
+.SchoolName{
+  width: 1000px;
+  padding-bottom: 300px;
+  /* width: fit-content; */
+  position: relative;
+  margin: 100px auto 0px;
+  text-align: center;
+}
+
+@media(max-width:900px){
+  .SchoolName{
+    width: 500px;
+    padding-bottom: 300px;
+    /* width: fit-content; */
+    position: relative;
+    margin: 100px auto 0px;
+    text-align: center;
+  }
 }
 
 @media(max-width:900px){
@@ -440,45 +463,12 @@ b{
 }
 
 
-/* Resume */
-
-.ResumePage{
-  padding-top: 50px;
-  width: fit-content;
-  position: relative;
-  margin: 100px auto 0px;
-  text-align: center;
-}
-
-.resumeview{
-  pointer-events: none;
-}
-
-.downloadCV{
-  cursor:pointer;
-  margin: 25px 0px;
-  width: 200px;
-  height: 40px;
-  background-color:#431f47;
-  color: #E7E7E7;
-  text-decoration: none;
-  border-radius: 5px;
-  border-style: none; 
-  transition: all 0.5s;
-}
-
-.downloadCV:hover{
-  transition: all 0.5s;
-  background-color: #E7E7E7;
-  color: #431f47;
-}
-
 
 /* FOOTER */
 
 footer{
   width: 90%;
-  height: 40px;
+  height: 60px;
   margin: 10px auto;
   margin-top: 80px;
   letter-spacing: 0.5px;
@@ -487,10 +477,17 @@ footer{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
   position: relative;
   bottom: 0px;
   text-align: center;
+}
+
+footer h3{
+  margin: 10 32px;
+  text-align: left;
+  font-weight: 500;
 }
 
 footer h4{
@@ -501,7 +498,7 @@ footer h4{
 .footerLinks{
   display: flex;
   width: 180px;
-  font-size: 18px;
+  font-size: 32px;
   justify-content: space-evenly;
 }
 
